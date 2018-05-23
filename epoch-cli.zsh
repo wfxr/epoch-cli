@@ -26,7 +26,7 @@ function epochms() {
 }
 
 function wfxr::date() {
-    date -d $(echo "$1" | sed "s/today\|yesterday\|tomorrow/$(date +%F -d $1)/g") ${@:2}
+    date -d "$(echo "$1" | sed "s/today\|yesterday\|tomorrow/$(date +%F -d $1)/g")" "${@:2}"
 }
 
 function fepoch() {
